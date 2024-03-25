@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Bridge</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/30864d0ffd.js" crossorigin="anonymous"></script>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Header styles */
+    header {
+      background-color:  #008CBA;
+      color: #fff;
+      padding: 13px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    /* Navigation styles */
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff9900;
+    }
+
+    /* Main section styles */
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+    }
+
+    .main-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .main-section p {
+      font-size: 18px;
+      color: #777;
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 400px;
+    }
+
+    /* Four column layout */
+    .column-container {
+      display: flex;
+      justify-content:center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .column {
+      flex-basis: 25%;
+      padding: 10px;
+    }
+
+    /* Footer section */
+    footer {
+      background-color: #979494;
+      color: #fff;
+      padding: 20px;
+      text-align: left;
+    }
+    /* Footer section */
+    h3 {
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+    }
+
+    .my_video {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 40vh; /* Set the height of the container div, adjust as needed */
+        }
+  /* navigation bar*/
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+  /* navigation bar display*/
+li {
+  display: inline;
+}
+
+li a {
+  display: inline;
+  padding: 8px;
+  color: white;
+}
+
+.search-container {
+  margin-left: 40px; /* Add some spacing between the header and search bar */
+}
+
+li a:hover {
+  background-color: lightslategray;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(24, 20, 20, 0.987);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 100px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: gray;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+
+.login-box a span:nth-child(1) {
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03f40f);
+}
+
+.main-section{
+    background-color: blue;
+      padding: 20px;
+}
+
+.prep {background-color: #f0f0f0;
+      padding: 20px;
+      height: 200px; /* Optional: Set a height for the div */
+      display: flex; /* Use flexbox layout */
+      justify-content:space-between; /* Horizontally center content */
+      
+    }
+.final {
+      display: flex; /* Use flexbox layout */
+      justify-content:space-between; /* Horizontally center content */
+}
+
+/* Overlay Effect*/
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align:left;
+}
+
+/* Button Section*/
+.btn {
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 10pc;
+}
+
+.success {background-color: #008CBA;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.news{
+    background-color: #f4f4f4;
+    padding: 12px 26px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    display: none;
+}
+
+.fa-solid {
+    color:#008CBA; 
+}
+
+.fa-thumbs-up{
+    color:#46a049;
+}
+  </style>
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <div>
+      <h1 style="font-size: 50px; color: black;">Study Bridge Consultancy</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-secret"></i> About us</a></li>
+        <li><a href="#"><i class="fa-regular fa-address-book"></i> Contact</a></li>
+        <li><a href="#"><i class="fa-solid fa-people-arrows"></i> Refer us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <img src="images/logo.png" alt="My image1" height="150" width="180" style="position:fixed; top: 0; left: 0; margin: 0; z-index: 1000;">
+  <!-- Main section -->
+
+<div class = "prep">
+    <h2 style="align-items: center;">Your dream starts here!</h2>
+    <div> 
+        
+    <p style="font-family:sans-serif; font-size: medium;"> Are you a student with dreams of studying in Germany? Your search ends here!<br><br>
+    At Study Bridge, we specialize in making your educational journey to Germany smooth, effortless, and enjoyable. Our mission is to empower and support students in realizing their academic aspirations seamlessly.<br><br>
+    With our expert consultancy services, we walk alongside you through every step of the process, from university selection and application to visa assistance and cultural integration.<br><br>
+    </p>
+    </div>
+   <!-- <div><img src="images/landing.jpg" alt="My image1" height="200" width="300"></div>-->   
+</div>
+<hr>
+    <br>
+    <br>
+  <!-- Placement for main offers -->
+
+  <h2 style="text-align: center; color: red; font-size: 40px;">
+    <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i> Our Services
+  </h2>
+  <br>
+  
+  <div class="column-container">
+
+    <div class="column">
+      <div class="container">
+      <img src="images/schoolapp.jpg" alt="My image1" height="200" width="300">
+      <div class="overlay">
+        <div class="text">We assist students securing admissions in both private and public universities in Germany <br>
+        such as the Technical University of Darmstadt and many more in top locations such as Berlin, Hamburg and Frankfurt!</div>
+      </div>
+    </div>
+      <h3> School Placement</h3>
+    </div>
+
+    <div class="column">
+      <div class="container">
+        <img src="images/Consultation.jpg" alt="My image1" height="200" width="300">
+        <div class="overlay">
+          <div class="text">You don't know where and how to your admission journey?<br>
+          Our team will assist you to understand what your choices are, what to apply for, where to apply for and how to maximize your chances.</div>
+        </div>
+      </div>
+        <h3> Consultation & Advisory</h3>
+      </div>
+
+
+    <div class="column">
+      <div class="container">
+        <img src="images/thesis.jpg" alt="My image1" height="200" width="300">
+        <div class="overlay">
+          <div class="text">
+          Sometimes we are too busy to dedicate quality time to our research and thesis. That is why you can rely on us. <br>
+          From the literature review to the quantitative analysis in Python, we will assist you to get top grades!
+         </div>
+        </div>
+      </div>
+        <h3> Masters Thesis and Research</h3>
+      </div>
+
+
+    <div class="column">
+      <div class="container">
+        <img src="images/Application Assistance.jpg" alt="My image1" height="200" width="300">
+        <div class="overlay">
+          <div class="text">Studying abroad can be financially draining, but it doesn't have to be! <br>
+          Our scholarship guides will let you know what financial possibilities are available and how to get them.</div>
+        </div>
+      </div>
+        <h3> School & Scholarship Application</h3>
+      </div>
+      
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <hr>
+
+  <!-- JAVASCRIPT  way to embed email JS to commit messaages --> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "ITEyWma_tgkzOjtbK",
+        });
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+   // Display Success Message
+            setTimeout(function() {
+        document.getElementById('news').style.display = 'block';
+      }, 2000);
+
+      
+            // these IDs from the previous steps
+            emailjs.sendForm('service_omf36yu', 'contact_form', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
+
+  <!-- Contact Form --> 
+  <div class="final">
+    <div>
+        <img src="images/Ghanapic.jpeg" alt="My image3" height="580" width="700"></div>
+    <div style="max-width: 700px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center;"><i class="fa-solid fa-envelope fa-bounce" style="--fa-bounce-start-scale-x: 1;--fa-bounce-start-scale-y: 1;--fa-bounce-jump-scale-x: 1;--fa-bounce-jump-scale-y: 1;--fa-bounce-land-scale-x: 1;--fa-bounce-land-scale-y: 1;--fa-bounce-rebound: 0;"></i>Book a Consultation Now!</h2>
+        <form id="myForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;">
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;">
+    
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+    
+          <label for="number">Phone Number:</label>
+          <input type="tel" id="number" name="number" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;">
+          <button class="btn success" type="submit" onclick="submitForm(event)">Submit</button>
+          <br>
+          <br>
+          <div class="news" id="news">
+            <p style="font-size: medium;">Congrats! We received your message. We will get back to you soon! <i class="fa-solid fa-thumbs-up"></i></p>
+          </div>
+        </form>
+      </div>
+  </div>
+    
+  
+<!-- Contact Form --> 
+
+
+  <footer>
+    &copy; 2024 My Website. All rights reserved by StudyBridge. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+  </footer>
+</body>
+</html>
